@@ -13,11 +13,14 @@ enum QuizError: Error {
     case noMoreQuestions
 }
 
-class QuizManager {
+class QuizManager: ObservableObject {
     let questions: [Question]
     private(set) var currentQuestionIdx = 0
     private var selectedOption: UUID? = nil
-    var score = 0
+    private(set) var score = 0
+    
+    @Published var questionText = ""
+    @Published var options: [Option] = []
     
     init(questions: [Question]) {
 // FIXME: add error handling
@@ -25,6 +28,14 @@ class QuizManager {
 //            throw QuizError.noQuestionsProvided
 //        }
         self.questions = questions
+        self.questionText = self.currentQuestion.text
+        self.options = self.currentQuestion.options
+    }
+    
+    func reset() {
+        self.score = 0
+        self.currentQuestionIdx = 0
+        self.selectedOption = nil
     }
     
     var currentQuestion: Question {
@@ -35,9 +46,10 @@ class QuizManager {
         selectedOption = optionId
     }
     
-    private func submit() throws {
+    func submit() {
         guard selectedOption != nil else {
-            throw QuizError.noOptionSelected
+//            throw QuizError.noOptionSelected
+            return
         }
         
         if selectedOption == currentQuestion.correctOption.id {
@@ -45,13 +57,15 @@ class QuizManager {
         }
     }
     
-    func nextQuestion() throws {
-        try submit()
+    func nextQuestion() {
+        submit()
         
         guard currentQuestionIdx + 1 < questions.count else {
-            throw QuizError.noMoreQuestions
+            return
         }
         
         currentQuestionIdx += 1
+        self.questionText = self.currentQuestion.text
+        self.options = self.currentQuestion.options
     }
 }

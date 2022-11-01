@@ -9,29 +9,58 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let quizManager = QuizManager(questions: Question.sampleQuestions)
+    @StateObject var quizManager = QuizManager(questions: Question.sampleQuestions)
+    
+    @State var isLastQuestion = false
+    
+    func nextQuestionAction(selected: UUID) {
+        quizManager.selectOption(optionId: selected)
+        
+        if quizManager.currentQuestionIdx < quizManager.questions.count - 1 {
+            quizManager.nextQuestion()
+        } else {
+            quizManager.submit()
+            isLastQuestion = true
+        }
+    }
     
     var body: some View {
-        VStack {
-            Text("Quizit")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.bottom)
-            
-            Text("The quiz will consist of 5 questions. Each question has 4 options out of which only one is correct")
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 40)
-            
-            NavigationLink(destination: QuestionView(questionNumber: quizManager.currentQuestionIdx + 1, question: quizManager.currentQuestion)) {
-                Text("Take Quiz")
-                    .padding()
-                    .background(.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+        if !isLastQuestion {
+            VStack {
+                Text("Quizit")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.bottom)
+                
+                Text("The quiz will consist of 5 questions. Each question has 4 options out of which only one is correct")
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 40)
+                
+                NavigationLink(
+                    destination:
+                        QuestionView(
+                            questionId: quizManager.currentQuestion.id,
+                            questionNumber: quizManager.currentQuestionIdx + 1,
+                            questionText: quizManager.questionText,
+                            options: quizManager.options.shuffled(),
+                            nextQuestionAction: nextQuestionAction
+                        )
+                ) {
+                    Text("Take Quiz")
+                        .padding()
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
+            .padding()
+            .navigationTitle("Home")
+        } else {
+            ScoreView(score: quizManager.score, tryAgainAction: {
+                quizManager.reset()
+                isLastQuestion = false
+            })
         }
-        .padding()
-        .navigationTitle("Home")
     }
 }
 

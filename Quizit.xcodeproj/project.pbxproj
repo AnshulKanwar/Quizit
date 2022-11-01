@@ -15,6 +15,7 @@
 		F858296E291042B900E8B719 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F858296D291042B900E8B719 /* Question.swift */; };
 		F8582970291042CC00E8B719 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = F858296F291042CC00E8B719 /* Option.swift */; };
 		F8582972291044BD00E8B719 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8582971291044BD00E8B719 /* QuestionView.swift */; };
+		F85829762910D73B00E8B719 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85829752910D73B00E8B719 /* ScoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		F858296D291042B900E8B719 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F858296F291042CC00E8B719 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		F8582971291044BD00E8B719 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		F85829752910D73B00E8B719 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				F858296A2910429100E8B719 /* Models */,
 				F858295C2910428A00E8B719 /* QuizitApp.swift */,
 				F858295E2910428A00E8B719 /* HomeView.swift */,
+				F85829752910D73B00E8B719 /* ScoreView.swift */,
 				F8582971291044BD00E8B719 /* QuestionView.swift */,
 				F85829602910428C00E8B719 /* Assets.xcassets */,
 				F85829622910428C00E8B719 /* Preview Content */,
@@ -161,6 +164,7 @@
 				F858296E291042B900E8B719 /* Question.swift in Sources */,
 				F8582970291042CC00E8B719 /* Option.swift in Sources */,
 				F858296C2910429D00E8B719 /* QuizManager.swift in Sources */,
+				F85829762910D73B00E8B719 /* ScoreView.swift in Sources */,
 				F8582972291044BD00E8B719 /* QuestionView.swift in Sources */,
 				F858295D2910428A00E8B719 /* QuizitApp.swift in Sources */,
 			);
