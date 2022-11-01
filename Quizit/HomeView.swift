@@ -34,7 +34,7 @@ struct HomeView: View {
                 
                 Text("The quiz will consist of 5 questions. Each question has 4 options out of which only one is correct")
                     .multilineTextAlignment(.center)
-                    .padding(.bottom, 40)
+                    .padding(.bottom, 60)
                 
                 NavigationLink(
                     destination:
@@ -47,6 +47,7 @@ struct HomeView: View {
                         )
                 ) {
                     Text("Take Quiz")
+                        .frame(maxWidth: .infinity)
                         .padding()
                         .background(.blue)
                         .foregroundColor(.white)
