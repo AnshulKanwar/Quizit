@@ -49,6 +49,8 @@
 		F85829502910428A00E8B719 = {
 			isa = PBXGroup;
 			children = (
+				F85829792910E14C00E8B719 /* README.md */,
+				F85829772910E12800E8B719 /* screenshot.png */,
 				F858295B2910428A00E8B719 /* Quizit */,
 				F858295A2910428A00E8B719 /* Products */,
 			);
@@ -68,11 +70,9 @@
 				F858296A2910429100E8B719 /* Models */,
 				F858295C2910428A00E8B719 /* QuizitApp.swift */,
 				F858295E2910428A00E8B719 /* HomeView.swift */,
-				F85829792910E14C00E8B719 /* README.md */,
 				F85829752910D73B00E8B719 /* ScoreView.swift */,
 				F8582971291044BD00E8B719 /* QuestionView.swift */,
 				F85829602910428C00E8B719 /* Assets.xcassets */,
-				F85829772910E12800E8B719 /* screenshot.png */,
 				F85829622910428C00E8B719 /* Preview Content */,
 			);
 			path = Quizit;
