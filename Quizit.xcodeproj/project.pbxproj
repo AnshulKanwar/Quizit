@@ -16,6 +16,8 @@
 		F8582970291042CC00E8B719 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = F858296F291042CC00E8B719 /* Option.swift */; };
 		F8582972291044BD00E8B719 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8582971291044BD00E8B719 /* QuestionView.swift */; };
 		F85829762910D73B00E8B719 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85829752910D73B00E8B719 /* ScoreView.swift */; };
+		F85829782910E12800E8B719 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = F85829772910E12800E8B719 /* screenshot.png */; };
+		F858297A2910E14C00E8B719 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F85829792910E14C00E8B719 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		F858296F291042CC00E8B719 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		F8582971291044BD00E8B719 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		F85829752910D73B00E8B719 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		F85829772910E12800E8B719 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
+		F85829792910E14C00E8B719 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +68,11 @@
 				F858296A2910429100E8B719 /* Models */,
 				F858295C2910428A00E8B719 /* QuizitApp.swift */,
 				F858295E2910428A00E8B719 /* HomeView.swift */,
+				F85829792910E14C00E8B719 /* README.md */,
 				F85829752910D73B00E8B719 /* ScoreView.swift */,
 				F8582971291044BD00E8B719 /* QuestionView.swift */,
 				F85829602910428C00E8B719 /* Assets.xcassets */,
+				F85829772910E12800E8B719 /* screenshot.png */,
 				F85829622910428C00E8B719 /* Preview Content */,
 			);
 			path = Quizit;
@@ -148,7 +154,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85829782910E12800E8B719 /* screenshot.png in Resources */,
 				F85829642910428C00E8B719 /* Preview Assets.xcassets in Resources */,
+				F858297A2910E14C00E8B719 /* README.md in Resources */,
 				F85829612910428C00E8B719 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
