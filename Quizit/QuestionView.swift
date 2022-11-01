@@ -45,12 +45,12 @@ struct QuestionView: View {
             }
             .padding(.bottom, 30)
             
-            Text("Next Question")
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
+            Button(action: {}) {
+                Text("Next Question")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.borderedProminent)
         }
         .padding()
         .navigationTitle("Question \(questionNumber)")
